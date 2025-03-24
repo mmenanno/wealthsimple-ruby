@@ -6,6 +6,8 @@ A Ruby gem that provides a clean interface to interact with the WealthSimple API
 
 ## Installation
 
+NOT PUBLISHED TO RUBYGEMS YET, STILL WIP
+
 Add this line to your application's `Gemfile`:
 
 ```Ruby

@@ -10,7 +10,6 @@ class Module
 end
 
 require_relative "wealthsimple/version"
-require_relative "wealthsimple/errors"
 require_relative "wealthsimple/client"
 
 module WealthSimple
