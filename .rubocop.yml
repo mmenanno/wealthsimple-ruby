@@ -1,0 +1,49 @@
+inherit_gem:
+  rubocop-shopify: rubocop.yml
+
+plugins:
+  - rubocop-sorbet
+  - rubocop-minitest
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 3.1
+  NewCops: enable
+  Exclude:
+    - "sorbet/**/*"
+    - ".mdlrc"
+
+Sorbet:
+  Enabled: true
+
+Sorbet/FalseSigil:
+  Exclude:
+    - ".toys/**/*"
+
+Sorbet/StrictSigil:
+  Enabled: true
+  Exclude:
+    - ".toys/**/*"
+
+Sorbet/ForbidTStruct:
+# Context for why this is preferable https://github.com/Shopify/rubocop-sorbet/pull/178#issuecomment-1739924189
+  Enabled: true
+
+
+Sorbet/RedundantExtendTSig:
+  Enabled: true
+
+Sorbet/ForbidTUnsafe:
+  Enabled: true
+
+Minitest:
+  Enabled: true
+
+Minitest/MultipleAssertions:
+  Max: 6
+
+Rails:
+  Enabled: true
+
+Rails/RefuteMethods:
+  EnforcedStyle: refute
